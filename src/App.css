@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+#moduleStyle{
+  min-width: 100vw;
+  min-height: 100vh;
+}
