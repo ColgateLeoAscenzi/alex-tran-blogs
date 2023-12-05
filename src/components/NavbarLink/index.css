@@ -1,0 +1,14 @@
+#nav-link{
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #60c17d;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(0,0,0,0);
+
+
+}
+
+#nav-link:hover{
+    border-bottom: 2px solid #60c17d;
+    color: #60c17d;
+}

@@ -1,14 +1,12 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Router from "./Router";
+import {RouterProvider} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-        <iframe
-            id="moduleStyle"
-            src="./pages/M8_CorrelationRegression.html"
-            title="M8Correlation Page"
-        ></iframe>
+      <RouterProvider router={Router} />
     </div>
   );
 }
