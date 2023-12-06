@@ -9,43 +9,43 @@ import aboutMD from "./markdown_content/about";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <ConnectedPage child={<div>Home</div>}/>,
+        element: <ConnectedPage><div>Home</div></ConnectedPage>,
     },
     {
         path: '/about',
-        element: <ConnectedPage child={<MarkdownPage markdown={aboutMD}/>}/>,
+        element: <ConnectedPage><MarkdownPage markdown={aboutMD}/></ConnectedPage>,
     },
     {
         path: '/research',
-        element: <ConnectedPage child={<MarkdownPage markdown={researchMD}/>}/>,
+        element: <ConnectedPage><MarkdownPage markdown={researchMD}/></ConnectedPage>,
     },
     {
         path: '/teaching',
-        element: <ConnectedPage child={<div>Teaching</div>}/>,
+        element: <ConnectedPage><div>Teaching</div></ConnectedPage>,
     },
     {
         path: '/awards-honors',
-        element: <ConnectedPage child={<div>Awards & Honors</div>}/>,
+        element: <ConnectedPage><div>Awards & Honors</div></ConnectedPage>,
     },
     {
         path: '/resume',
-        element: <ConnectedPage child={<div>CV</div>}/>,
+        element: <ConnectedPage><div>CV</div></ConnectedPage>,
     },
     {
         path: '/learn-r',
-        element: <ConnectedPage child={<div>R with Alex <Card><Link to="/learn-r/M8_CorrelationRegression">GO GO</Link></Card></div>}/>,
+        element: <ConnectedPage><div>R with Alex <Card><Link to="/learn-r/M8_CorrelationRegression">GO GO</Link></Card></div></ConnectedPage>,
     },
     {
         path: '/learn-r/M8_CorrelationRegression',
-        element: <ConnectedPage child={<div><iframe
+        element: <ConnectedPage><div><iframe
             id="moduleStyle"
             src="../pages/M8_CorrelationRegression.html"
             title="M8Correlation Page"
-        ></iframe></div>}/>,
+        ></iframe></div></ConnectedPage>,
     },
     {
         path: '/blogs',
-        element: <ConnectedPage child={<div>Blogs</div>}/>,
+        element: <ConnectedPage><div>Blogs</div></ConnectedPage>,
     },
 ]);
 

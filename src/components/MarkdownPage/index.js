@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 
 const MarkdownPage = ({markdown}) => {
     return (
-        <div id="page-wrapper">
+        <div id="md-page-wrapper">
             <div id="md-wrapper"><Markdown >{markdown}</Markdown></div>
         </div>
     )

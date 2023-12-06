@@ -6,7 +6,9 @@ import {RouterProvider} from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={Router} />
+        <div className="main-wrapper">
+            <RouterProvider router={Router} />
+        </div>
     </div>
   );
 }

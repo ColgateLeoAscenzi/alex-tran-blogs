@@ -1,0 +1,11 @@
+#icon-link-wrapper{
+    color: #333;
+    padding: 4px;
+    font-size: 0.8rem;
+}
+
+#icon-link-wrapper:hover{
+    color: green;
+    transform: scale(1.2);
+    cursor: pointer;
+}

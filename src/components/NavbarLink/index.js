@@ -3,17 +3,17 @@ import "./index.css";
 import {Link} from "@mui/material";
 import PropTypes from "prop-types";
 
-const NavbarLink = ({path, name}) => {
+const NavbarLink = ({path, children}) => {
     return (
         <Link href={path} underline="none" id="nav-link">
-            {name}
+            {children}
         </Link>
     )
 }
 
 NavbarLink.propTypes = {
     path: PropTypes.string,
-    name: PropTypes.string
+    children: PropTypes.string
 }
 
 export default NavbarLink;

@@ -1,0 +1,18 @@
+#footer-wrapper{
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+#icon-wrapper{
+    display: flex;
+    flex-direction: row;
+    max-width: 35vw;
+    min-width: 35vw;
+    justify-content: center;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+}
+

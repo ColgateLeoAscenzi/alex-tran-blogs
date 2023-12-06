@@ -1,4 +1,4 @@
-#page-wrapper{
+#md-page-wrapper{
     min-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -6,5 +6,6 @@
 }
 
 #md-wrapper{
-    max-width: 70vw;
+    max-width: 42vw;
+    text-align: left;
 }

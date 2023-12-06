@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const RMDPage = ({rmdName}) => {
     return (
-        <div id="page-wrapper">
+        <div id="rmd-page-wrapper">
             {rmdName}
         </div>
     )
