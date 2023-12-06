@@ -9,6 +9,7 @@ import awardsMD from "./markdown_content/awards";
 import petalsMD from "./markdown_content/blogs/petals";
 import BlogsPage from "./pages/BlogsPage";
 import RBlogsPage from "./pages/RBlogsPage";
+import onfriendshipMD from "./markdown_content/blogs/onfriendship";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
     {
         path: '/blogs/petals',
         element: <ConnectedPage><MarkdownPage>{petalsMD}</MarkdownPage></ConnectedPage>,
+    },
+    {
+        path: '/blogs/onfriendship',
+        element: <ConnectedPage><MarkdownPage>{onfriendshipMD}</MarkdownPage></ConnectedPage>,
     },
 ]);
 
