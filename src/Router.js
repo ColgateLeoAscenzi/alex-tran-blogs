@@ -1,7 +1,6 @@
 import React from 'react';
-import { createBrowserRouter, Link } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import ConnectedPage from "./components/ConnectedPage";
-import {Card} from "@mui/material";
 import MarkdownPage from "./components/MarkdownPage";
 import researchMD from "./markdown_content/research";
 import aboutMD from "./markdown_content/about";
@@ -9,6 +8,7 @@ import teachingMD from "./markdown_content/teaching";
 import awardsMD from "./markdown_content/awards";
 import petalsMD from "./markdown_content/blogs/petals";
 import BlogsPage from "./pages/BlogsPage";
+import RBlogsPage from "./pages/RBlogsPage";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/learn-r',
-        element: <ConnectedPage><div>R with Alex <Card><Link to="/learn-r/M8_CorrelationRegression">GO GO</Link></Card></div></ConnectedPage>,
+        element: <ConnectedPage><RBlogsPage/></ConnectedPage>,
     },
     {
         path: '/learn-r/M8_CorrelationRegression',
