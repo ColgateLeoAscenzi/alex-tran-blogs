@@ -5,6 +5,10 @@ import {Card} from "@mui/material";
 import MarkdownPage from "./components/MarkdownPage";
 import researchMD from "./markdown_content/research";
 import aboutMD from "./markdown_content/about";
+import teachingMD from "./markdown_content/teaching";
+import awardsMD from "./markdown_content/awards";
+import petalsMD from "./markdown_content/blogs/petals";
+import BlogsPage from "./pages/BlogsPage";
 
 const router = createBrowserRouter([
     {
@@ -13,23 +17,23 @@ const router = createBrowserRouter([
     },
     {
         path: '/about',
-        element: <ConnectedPage><MarkdownPage markdown={aboutMD}/></ConnectedPage>,
+        element: <ConnectedPage><MarkdownPage>{aboutMD}</MarkdownPage></ConnectedPage>,
     },
     {
         path: '/research',
-        element: <ConnectedPage><MarkdownPage markdown={researchMD}/></ConnectedPage>,
+        element: <ConnectedPage><MarkdownPage>{researchMD}</MarkdownPage></ConnectedPage>,
     },
     {
         path: '/teaching',
-        element: <ConnectedPage><div>Teaching</div></ConnectedPage>,
+        element: <ConnectedPage><MarkdownPage>{teachingMD}</MarkdownPage></ConnectedPage>,
     },
     {
         path: '/awards-honors',
-        element: <ConnectedPage><div>Awards & Honors</div></ConnectedPage>,
+        element: <ConnectedPage><MarkdownPage>{awardsMD}</MarkdownPage></ConnectedPage>,
     },
     {
         path: '/resume',
-        element: <ConnectedPage><div>CV</div></ConnectedPage>,
+        element: <ConnectedPage><div><a href ="/cv.pdf">Download my Resume!</a></div></ConnectedPage>,
     },
     {
         path: '/learn-r',
@@ -39,13 +43,17 @@ const router = createBrowserRouter([
         path: '/learn-r/M8_CorrelationRegression',
         element: <ConnectedPage><div><iframe
             id="moduleStyle"
-            src="../pages/M8_CorrelationRegression.html"
+            src="../rmd_html/M8_CorrelationRegression.html"
             title="M8Correlation Page"
         ></iframe></div></ConnectedPage>,
     },
     {
         path: '/blogs',
-        element: <ConnectedPage><div>Blogs</div></ConnectedPage>,
+        element: <ConnectedPage><BlogsPage/></ConnectedPage>,
+    },
+    {
+        path: '/blogs/petals',
+        element: <ConnectedPage><MarkdownPage>{petalsMD}</MarkdownPage></ConnectedPage>,
     },
 ]);
 

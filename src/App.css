@@ -16,6 +16,19 @@
   flex-direction: column;
 }
 
+p {
+  line-height: 160%;
+  text-align: left;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img{
+  max-width: 100%;
+}
+
 #moduleStyle{
   min-width: 100vw;
   min-height: 100vh;

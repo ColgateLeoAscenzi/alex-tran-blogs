@@ -16,7 +16,7 @@ export const mainRoutes = [
         name: "Awards & Honors",
     },
     {
-        path: "/resume",
+        path: "/cv.pdf",
         name: "CV",
     },
     {
