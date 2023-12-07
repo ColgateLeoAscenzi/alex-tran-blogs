@@ -12,8 +12,10 @@ import BlogsPage from "./pages/BlogsPage";
 import RBlogsPage from "./pages/RBlogsPage";
 import onfriendshipMD from "./markdown_content/blogs/onfriendship";
 import onteachingandgardeningMD from "./markdown_content/blogs/onteachingandgardening";
+import {rBlogs} from "./pages/RBlogsPage/consts";
 
-const router = createBrowserRouter([
+
+let routes = [
     {
         path: '/',
         element: <ConnectedPage><MarkdownPage>{homeMD}</MarkdownPage></ConnectedPage>,
@@ -43,14 +45,6 @@ const router = createBrowserRouter([
         element: <ConnectedPage><RBlogsPage/></ConnectedPage>,
     },
     {
-        path: '/learn-r/M8_CorrelationRegression',
-        element: <ConnectedPage><div><iframe
-            id="moduleStyle"
-            src="../rmd_html/M8_CorrelationRegression.html"
-            title="M8Correlation Page"
-        ></iframe></div></ConnectedPage>,
-    },
-    {
         path: '/blogs',
         element: <ConnectedPage><BlogsPage/></ConnectedPage>,
     },
@@ -66,6 +60,22 @@ const router = createBrowserRouter([
         path: '/blogs/onteachingandgardening',
         element: <ConnectedPage><MarkdownPage>{onteachingandgardeningMD}</MarkdownPage></ConnectedPage>,
     },
-]);
+];
+
+// add blog routes
+routes = routes.concat(rBlogs.map(({fileName,title}) => {
+    return (
+        {
+            path: `/learn-r/${fileName}`,
+            element: <ConnectedPage><div><iframe
+                id="moduleStyle"
+                src={`../rmd_html/${fileName}.html`}
+                title={title}
+            ></iframe></div></ConnectedPage>,
+        }
+    )
+}));
+
+const router = createBrowserRouter(routes);
 
 export default router;
