@@ -9,6 +9,7 @@ const BlogCard = ({fileName, imgSrc, title, description}) => {
         <Card id="blog-card-wrapper">
             <CardActionArea
                 component={Link} to={`/learn-r/${fileName}`}
+                onClick={() => window.scrollTo(0,0)}
             >
                 <CardMedia
                     component="img"
