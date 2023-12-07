@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import ConnectedPage from "./components/ConnectedPage";
 import MarkdownPage from "./components/MarkdownPage";
 import researchMD from "./markdown_content/research";
+import homeMD from "./markdown_content/home";
 import aboutMD from "./markdown_content/about";
 import teachingMD from "./markdown_content/teaching";
 import awardsMD from "./markdown_content/awards";
@@ -10,11 +11,12 @@ import petalsMD from "./markdown_content/blogs/petals";
 import BlogsPage from "./pages/BlogsPage";
 import RBlogsPage from "./pages/RBlogsPage";
 import onfriendshipMD from "./markdown_content/blogs/onfriendship";
+import onteachingandgardeningMD from "./markdown_content/blogs/onteachingandgardening";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <ConnectedPage><div>Home</div></ConnectedPage>,
+        element: <ConnectedPage><MarkdownPage>{homeMD}</MarkdownPage></ConnectedPage>,
     },
     {
         path: '/about',
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
     {
         path: '/blogs/onfriendship',
         element: <ConnectedPage><MarkdownPage>{onfriendshipMD}</MarkdownPage></ConnectedPage>,
+    },
+    {
+        path: '/blogs/onteachingandgardening',
+        element: <ConnectedPage><MarkdownPage>{onteachingandgardeningMD}</MarkdownPage></ConnectedPage>,
     },
 ]);
 

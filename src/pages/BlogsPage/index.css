@@ -1,2 +1,31 @@
 #blogs-page-wrapper{
+    text-align: left;
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
 }
+
+.blog-link-li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.blog-link-a{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+}
+
+.blog-link-a:visited{
+    color: black;
+}
+
+.blog-link-a:hover{
+    color: black;
+    text-decoration-style: solid;
+    text-underline-offset: 3px;
+    text-decoration-color: #60c17d;
+}
+

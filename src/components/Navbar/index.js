@@ -9,7 +9,7 @@ const Navbar = () => {
             {
                 mainRoutes.map(({name, path}, i) => {
                     return (
-                        <NavbarLink path={path} key={i}>{name}</NavbarLink>
+                        <NavbarLink path={path} key={i} index={i}>{name}</NavbarLink>
                     )
                 })
             }
